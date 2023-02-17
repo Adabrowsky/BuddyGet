@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Login  from './src/screens/Login';
+import LocAuth  from './src/screens/LocAuth';
 import SignUp  from './src/screens/SignUp';
 import Navigation  from './src/navigation/index';
 import {CCustom} from './src/components/CCustom';

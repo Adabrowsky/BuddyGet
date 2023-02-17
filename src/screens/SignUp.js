@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
-import { StyleSheet, Text, Button,View,Image,useWindowDimensions } from 'react-native';
+import { StyleSheet, Text, Button,View,Image,useWindowDimensions,Alert } from 'react-native';
 import {CCustom} from './../components/CCustom';
 import TextInputCustom from '../components/TextInputCustom';
 import ButtonCustom from '../components/ButtonCustom';
@@ -15,9 +15,13 @@ export default function SignUp(){
 
     const onSignUpPressed = () =>{
         createUserWithEmailAndPassword(auth,email,password)
-        .then(userCredentials=>{
-            const user = userCredential.user;
-            console.log(user);
+        .then((userCredential)=>{
+                const user = userCredential.user;
+                Alert.alert('User has been created');
+            })
+            .catch(error =>{
+                console.log(error);
+                Alert.alert(error.message);
             }
             )
         };

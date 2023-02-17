@@ -10,7 +10,7 @@ export default function Home(){
 
     return (
         <View style={styles.container}>
-            <Image source={Logo} style={[styles.logo],{height:height*0.3}} resizeMode="contain"/>
+            <Text>Home sweat Home</Text>
 
         </View >
     );

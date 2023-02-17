@@ -14,6 +14,10 @@ export default function SignUp(){
     const [passwordRep,setPasswordRep] = useState('');
 
     const onSignUpPressed = () =>{
+        if(password!=passwordRep){
+            Alert.alert("Passwords are diffrent!");
+            return;
+        }
         createUserWithEmailAndPassword(auth,email,password)
         .then((userCredential)=>{
                 const user = userCredential.user;

@@ -58,7 +58,6 @@ export default function Login({navigation}){
           <TextInputCustom placeholder="Username" value={username} setValue={setUsername} />
           <TextInputCustom placeholder="Password" value={password} setValue={setPassword} secureTextEntry={true}/>
           <ButtonCustom text="Sign In" onPress={onSignInPressed} type="Primary"/>
-          <ButtonCustom text="Sign In With FingerPrint"  type="Primary"/>
           <ButtonCustom text="Sign Up" onPress={onSignUpPressed} type="Secondary"/>
         </View >
     );

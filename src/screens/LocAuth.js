@@ -11,20 +11,35 @@ import * as LocalAuthentication from 'expo-local-authentication';
 
 export default function LocAuth({navigation}){
     const {height,width} = useWindowDimensions();
+    /*
     useEffect(()=>{
         const biometricAuth = LocalAuthentication.authenticateAsync({
             promptMessage:'Login With Biometrics',
             cancelLabel:'cancel',
             disableDeviceFallback:true,
         })
-        if(biometricAuth){
-          //navigation.navigate("Home");
-           console.log("success");
-        }else{
+        */
+        let biometricAuth=0;
+        useEffect(() => {
+                const getEnrollment = async () => {
+                    const isEnrolled = await LocalAuthentication.isEnrolledAsync();
+                    if (isEnrolled) {
+                        const { success } = await LocalAuthentication.authenticateAsync({ promptMessage: 'Authenticate' });
+                        if (success) {
+                            biometricAuth=1;
+                            navigation.navigate("Home");
+                        }
+
+                    }
+                };
+                getEnrollment();
+            }, [])
+        if(biometricAuth==1){
+           console.log("successsss");
+        }else if(biometricAuth==0){
         console.log("nosuccess");
         }
-        console.log(biometricAuth);
-    })
+
     return (
         <View style={styles.container}>
             <Image source={Fingerprint} style={[styles.logo],{height:height*0.6}} resizeMode="contain"/>

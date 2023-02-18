@@ -3,5 +3,5 @@ export const CCustom = {
   GrayBG: '#305252',
   Onyx: '#373E40',
   LightBlue: '#B7D5D4',
-  Mint: '#D1E3DD',
+  Mint: 'black',
 };

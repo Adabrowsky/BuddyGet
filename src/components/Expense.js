@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
-import { StyleSheet, Text,View } from 'react-native';
+import { StyleSheet, Text,View,Pressable } from 'react-native';
 import {CCustom} from './CCustom';
 
-export default function ExpenseTotal(){
+export default function ExpenseTotal({onPress}){
 
 	const { expenses } = useContext(AppContext);
 
@@ -12,9 +12,9 @@ export default function ExpenseTotal(){
 	}, 0);
 
 	return (
-		<View style={styles.box}>
+		<Pressable style={styles.box} onPress={onPress}>
 			<Text style={styles.H2}>Spent so far: £{total}</Text >
-		</View>
+		</Pressable>
 	);
 };
 const styles = StyleSheet.create({

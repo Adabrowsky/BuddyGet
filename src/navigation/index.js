@@ -21,7 +21,7 @@ export default function Navigation(){
                 <Stack.Screen name="SignUp" component={SignUp}/>
                 <Stack.Screen name="LocAuth" component={LocAuth}/>
                 <Stack.Screen name="Home" component={Home}/>
-                <Stack.Screen name="Income" component={Income}/>
+                <Stack.Screen name="Incomes" component={Incomes}/>
                 <Stack.Screen name="Expenses" component={Expenses}/>
             </Stack.Navigator>
         </NavigationContainer>
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   container: {
    flex:1,
     width:'100%',
-    backgroundColor: CCustom.Mint,
+    backgroundColor: '#31423c',
     alignItems: 'center',
     justifyContent: 'center',
   },

@@ -21,7 +21,6 @@ export default function Login({value,setValue,placeholder,secureTextEntry}){
 
 const styles = StyleSheet.create({
     container:{
-
         backgroundColor:CCustom.Onyx,
         width:'100%',
         borderColor:'#000',
@@ -30,9 +29,11 @@ const styles = StyleSheet.create({
         addingHorizontal:10,
         marginVertical:5,
         padding:20,
+        color:'white',
     },
     input:  {
        fontSize:16,
+       color:'#FFF',
     },
 }
 )

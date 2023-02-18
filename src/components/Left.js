@@ -20,7 +20,7 @@ export default function Left(){
 };
 const styles = StyleSheet.create({
   H2:{
-      color:'#0F0',
+      color:'#44a63b',
       fontSize:20,
       fontWeight:'bold',
       fontFamily:'Roboto',

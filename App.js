@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
-import Home  from './src/screens/Home';
+import Expenses from './src/screens/Expenses';
+import Home from './src/screens/Home';
 import Navigation  from './src/navigation/index';
 
 import {CCustom} from './src/components/CCustom';
@@ -29,7 +30,7 @@ export { auth, db };
 export default function App() {
   return (
     <View style={styles.container}>
-        <Home/>
+        <Navigation/>
     </View>
   );
 }
@@ -40,6 +41,6 @@ const styles = StyleSheet.create({
   container: {
     flex:1,
     width:'100%',
-    backgroundColor: CCustom.Mint,
+    backgroundColor:'black',
   },
 });

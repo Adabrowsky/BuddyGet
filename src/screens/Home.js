@@ -3,21 +3,26 @@ import { useState } from 'react';
 import { StyleSheet, Text, Button,View,Image,useWindowDimensions } from 'react-native';
 import TextInputCustom from '../components/TextInputCustom';
 import ButtonCustom from '../components/ButtonCustom';
+import BottomNavBar from './../components/BottomNavBar';
 import {useNavigation} from '@react-navigation/native';
-import BottomNavigation from './../navigation/AuthIndex';
 import {CCustom} from './../components/CCustom';
 import Budget from './../components/Budget';
 import Expense from './../components/Expense';
 import Left from './../components/Left';
 
 export default function Home({navigation}){
-        console.log("i am in home");
+
+const navToEx = () =>{
+    navigation.navigate("Expenses");
+}
+
     return (
         <View style={styles.container}>
             <Text style={styles.H1}>Budget Summary</Text>
             <Budget/>
-            <Expense/>
+            <Expense onPress={navToEx}/>
             <Left/>
+
         </View >
 
     );
@@ -29,6 +34,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding:20,
+    backgroundColor:'#31423c',
   },
   logo:{
     width:'70%',

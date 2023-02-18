@@ -1,12 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState,useEffect } from 'react';
-import { StyleSheet, Text, Button,View,Image,useWindowDimensions } from 'react-native';
+import { StyleSheet, Text, Button,View,Image,useWindowDimensions,Alert } from 'react-native';
 import Logo from '../../assets/img/logo.png';
 import TextInputCustom from '../components/TextInputCustom';
 import ButtonCustom from '../components/ButtonCustom';
 import Na from '@react-navigation/native';
 import * as LocalAuthentication from 'expo-local-authentication';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {CCustom} from './../components/CCustom';
 
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import {auth} from './../../App';
@@ -69,6 +70,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding:20,
+    backgroundColor:'#31423c',
   },
   logo:{
     width:'70%',

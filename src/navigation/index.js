@@ -7,17 +7,22 @@ import Login  from './../screens/Login';
 import SignUp  from './../screens/SignUp';
 import Home  from './../screens/Home';
 import LocAuth  from './../screens/LocAuth';
+import Expenses from './../screens/Expenses';
+import Incomes  from './../screens/Incomes';
+import Quote  from './../screens/Quote';
 
 const Stack = createNativeStackNavigator();
 
 export default function Navigation(){
     return (
-        <NavigationContainer style={styles.container}>
+        <NavigationContainer style={styles.container} independent={true}>
             <Stack.Navigator screenOptions={{headerShown:false}}>
                 <Stack.Screen name="Login" component={Login}/>
                 <Stack.Screen name="SignUp" component={SignUp}/>
                 <Stack.Screen name="LocAuth" component={LocAuth}/>
                 <Stack.Screen name="Home" component={Home}/>
+                <Stack.Screen name="Income" component={Income}/>
+                <Stack.Screen name="Expenses" component={Expenses}/>
             </Stack.Navigator>
         </NavigationContainer>
     );

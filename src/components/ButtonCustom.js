@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Pressable } from 'react-native';
+import { StyleSheet, Text, Pressable } from 'react-native';
 import {CCustom} from './CCustom';
 
 export default function ButtonCustom({onPress,text,type}){

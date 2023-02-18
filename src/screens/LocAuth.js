@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState ,useEffect} from 'react';
-import { StyleSheet, Text, Button,View,Image,useWindowDimensions } from 'react-native';
+import { StyleSheet,View,Image,useWindowDimensions } from 'react-native';
 import Fingerprint from '../../assets/img/fingerprint.png';
 import TextInputCustom from '../components/TextInputCustom';
 import ButtonCustom from '../components/ButtonCustom';
@@ -11,14 +11,6 @@ import * as LocalAuthentication from 'expo-local-authentication';
 
 export default function LocAuth({navigation}){
     const {height,width} = useWindowDimensions();
-    /*
-    useEffect(()=>{
-        const biometricAuth = LocalAuthentication.authenticateAsync({
-            promptMessage:'Login With Biometrics',
-            cancelLabel:'cancel',
-            disableDeviceFallback:true,
-        })
-        */
         let biometricAuth=0;
         useEffect(() => {
                 const getEnrollment = async () => {

@@ -1,18 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { StyleSheet, Text, Button,View,Image,useWindowDimensions } from 'react-native';
-import Logo from '../../assets/img/logo.png';
 import TextInputCustom from '../components/TextInputCustom';
 import ButtonCustom from '../components/ButtonCustom';
 import {useNavigation} from '@react-navigation/native';
+import BottomNavigation from './../navigation/AuthIndex';
+import {CCustom} from './../components/CCustom';
+import Budget from './../components/Budget';
+import Expense from './../components/Expense';
+import Left from './../components/Left';
 
-export default function Home(){
-
+export default function Home({navigation}){
+        console.log("i am in home");
     return (
         <View style={styles.container}>
-            <Text>Home sweat Home</Text>
-
+            <Text style={styles.H1}>Budget Summary</Text>
+            <Budget/>
+            <Expense/>
+            <Left/>
         </View >
+
     );
 }
 const styles = StyleSheet.create({
@@ -28,4 +35,32 @@ const styles = StyleSheet.create({
     maxWidth:300,
     maxHeight:150,
   },
+  H1:{
+    marginVertical:20,
+    color:CCustom.GreenMain,
+    fontSize:45,
+    fontWeight:'bold',
+    fontFamily:'Roboto',
+    textShadowColor: CCustom.LightBlue,
+    textShadowOffset: {width: 1, height: 1},
+    textShadowRadius: 1
+  },
+  H2:{
+      color:'#000',
+      fontSize:20,
+      fontWeight:'bold',
+      fontFamily:'Roboto',
+      textShadowRadius: 1
+    },
+  box:{
+    width:'100%',
+    padding:20,
+    marginVertical:10,
+    alignItems:"center",
+    borderRadius:15,
+    backgroundColor: CCustom.LightBlue,
+    borderColor:'#000',
+    borderWidth:1,
+  }
+
 });

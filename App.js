@@ -1,10 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
-import Expenses from './src/screens/Expenses';
-import Home from './src/screens/Home';
-import Navigation  from './src/navigation/index';
 
+import Navigation  from './src/navigation/index';
+import { AppProvider } from './src/context/AppContext';
 import {CCustom} from './src/components/CCustom';
 
 import firebase from 'firebase/compat/app';
@@ -29,9 +28,11 @@ export { auth, db };
 
 export default function App() {
   return (
+  <AppProvider>
     <View style={styles.container}>
         <Navigation/>
     </View>
+  </AppProvider>
   );
 }
 

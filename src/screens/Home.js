@@ -15,11 +15,14 @@ export default function Home({navigation}){
 const navToEx = () =>{
     navigation.navigate("Expenses");
 }
+const navToIn = () =>{
+    navigation.navigate("Incomes");
+}
 
     return (
         <View style={styles.container}>
             <Text style={styles.H1}>Budget Summary</Text>
-            <Budget/>
+            <Budget onPress={navToIn}/>
             <Expense onPress={navToEx}/>
             <Left/>
 

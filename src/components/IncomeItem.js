@@ -3,11 +3,12 @@ import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 import { StyleSheet, Text, Pressable,View,Image,TouchableOpacity } from 'react-native';
 import Delete from '../../assets/img/bin.png';
-export default function ExpenseItem(props){
+
+export default function IncomeItem(props){
 	const { dispatch } = useContext(AppContext);
-	const handleDeleteExpense = () => {
+	const handleDeleteIncome = () => {
 		dispatch({
-			type: 'DELETE_EXPENSE',
+			type: 'DELETE_INCOME',
 			payload: props.id,
 		});
 	};
@@ -15,9 +16,9 @@ export default function ExpenseItem(props){
 	return (
 		<View style={styles.ListElement}>
 			<Text style={styles.text}>{props.name}</Text>
-			<Text style={styles.text}>{props.cost}$</Text>
-            <Pressable style={styles.pressable} onPress={handleDeleteExpense}>
-			<Image name='delete' onClick={handleDeleteExpense} source={Delete} style={styles.icon} resizeMode="contain"/>
+			<Text style={styles.text}>{props.worth}$</Text>
+            <Pressable style={styles.pressable} onPress={handleDeleteIncome}>
+			<Image name='delete' onClick={handleDeleteIncome} source={Delete} style={styles.icon} resizeMode="contain"/>
             </Pressable>
 		</View>
 	);

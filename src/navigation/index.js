@@ -21,7 +21,7 @@ export default function Navigation(){
                 <Stack.Screen name="SignUp" component={SignUp}/>
                 <Stack.Screen name="LocAuth" component={LocAuth}/>
                 <Stack.Screen name="Home" component={Home}/>
-                <Stack.Screen name="Incomes" component={Incomes}/>
+                <Stack.Screen name="Incomes"  component={Incomes}/>
                 <Stack.Screen name="Expenses" component={Expenses}/>
             </Stack.Navigator>
         </NavigationContainer>

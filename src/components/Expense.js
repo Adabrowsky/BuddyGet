@@ -13,7 +13,7 @@ export default function ExpenseTotal({onPress}){
 
 	return (
 		<Pressable style={styles.box} onPress={onPress}>
-			<Text style={styles.H2}>Spent so far: £{total}</Text >
+			<Text style={styles.H2}>Spent so far: {total}$</Text >
 		</Pressable>
 	);
 };

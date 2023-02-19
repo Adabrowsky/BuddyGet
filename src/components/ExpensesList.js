@@ -18,15 +18,6 @@ export default function ExpenseList(){
 		);
 		setfilteredExpenses(searchResults);
 	};
-/*
-<input
-				type='text'
-				class='form-control mb-2 mr-sm-2'
-				placeholder='Type to search...'
-				onChange={handleChange}
-			/>
-
-			*/
 	return (
 
 			<View style={styles.ListCont}>
@@ -45,12 +36,6 @@ export default function ExpenseList(){
 
 const styles = StyleSheet.create({
     ListCont:{
-    //flex:1,
-        //display:'flex',
-       // flexDirection:'column',
-        //alignItems:'center',
-       // justifyContent:'center',
-       backgroundColor:'blue',
        marginTop:50,
     },
 });

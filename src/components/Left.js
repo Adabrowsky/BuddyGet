@@ -4,7 +4,11 @@ import { StyleSheet, Text,View } from 'react-native';
 import {CCustom} from './CCustom';
 export default function Left(){
 
-	const { expenses, budget } = useContext(AppContext);
+	const { expenses,incomes } = useContext(AppContext);
+
+    const budget = incomes.reduce((budget, item) => {
+        		return (budget += item.worth);
+        	}, 0);
 
 	const totalExpenses = expenses.reduce((total, item) => {
 		return (total += item.cost);
@@ -14,7 +18,7 @@ export default function Left(){
     let Left = budget-totalExpenses;
 	return (
 		<View style={styles.box}>
-        			<Text style={styles.H2}>Left: {Left}</Text >
+        			<Text style={styles.H2}>Left: {Left}$</Text >
         </View>
 	);
 };
